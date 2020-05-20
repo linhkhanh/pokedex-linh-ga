@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head.ejs') %>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https:/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+
+<body>
+    <header>
+        <a href="/" class="pokedex">
+            <h1>POKEDEX</h1>
+        </a>
+        <nav>
+            <a href="/pokemon" class="nav">List</a>
+            <a href="/pokemon/new" class="nav">Create</a>
+            <a href="/pokemon/<%=index%>/edit" class="nav">Edit</a>
+        </nav>
+    </header>
+    <div class="show">
+        <img src="<%= pokemon.img; %>">
+        <div id="tabs">
+            <ul>
+                <li><a href="#tabs-1">Name</a></li>
+                <li><a href="#tabs-2">Classification</a></li>
+                <li><a href="#tabs-3">Type</a></li>
+                <li><a href="#tabs-4">Stats</a></li>
+                <li><a href="#tabs-5">Size</a></li>
+                <li><a href="#tabs-6">Damages</a></li>
+            </ul>
+            <div id="tabs-1">
+                <p><%= pokemon.name; %></p>
+            </div>
+            <div id="tabs-2">
+                <p><%= pokemon.misc.classification; %></p>
+            </div>
+            <div id="tabs-3">
+                <% pokemon.type.forEach((item) => { %>
+                <p><%= item; %></p>
+                <% }) %>
+            </div>
+            <div id="tabs-4">
+                <% for(let key in pokemon.stats) { %>
+                <p><%= key; %> : <%= pokemon.stats[key]; %></p>
+                <% } %>
+            </div>
+            <div id="tabs-5">
+                <p>Weight: <%= pokemon.misc.weight; %></p>
+                <p>Height: <%= pokemon.misc.height; %></p>
+            </div>
+            <div id="tabs-6">
+                <% for(let key in pokemon.damages) { %>
+                <p><%= key; %> : <%= pokemon.damages[key]; %></p>
+                <% } %>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

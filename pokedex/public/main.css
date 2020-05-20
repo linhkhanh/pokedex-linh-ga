@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Righteous&family=Sigmar+One&display=swap');
+body {
+    background-image: url('https://vignette.wikia.nocookie.net/simplemmo/images/5/50/Wiki-background/revision/latest?cb=20180523192620');
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    padding: 0;
+    font-family: 'Righteous', cursive;
+}
+header {
+   border-bottom: 1px solid lightgray;
+   margin-bottom: 3%;
+   display: flex;
+   flex-flow: row nowrap;
+   justify-content: space-between;
+}
+.pokedex {
+    margin-left: 3%;
+    font-family: 'Sigmar One', cursive;
+    color: yellow;
+    text-shadow: 0 0 3px #0000FF, 0 0 5px #0000FF;
+
+}
+.logo {
+    width: 50%;
+    margin: 6% auto;
+}
+.pokemon {
+    width: 100%;
+}
+nav {
+    margin-right: 2%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    width: 20%;
+}
+.nav {
+    color: yellow;
+    text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+    font-size: 24px;
+    margin: 4%;
+}
+.form-search {
+    width: 40%;
+    margin: 5% auto;
+    background-color: wheat;
+    border-radius: 5px;
+    font-size: 22px;
+ }
+.search, .input-search {
+    border: none;
+    background-color: wheat;
+    border-radius: 5px;
+}
+.input-search {
+    width: 92%;
+}
+
+.item {
+    width: 22%;
+    height: 250px;
+    margin: 1%;
+    border: 2px solid whitesmoke;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+}
+.top {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    background-color: white;
+    position: relative;
+    bottom: 122%;
+    width: 100%;
+    background-color: rgba(235, 233, 243, 0.3);
+    padding: 1%;
+}
+.bottom {
+    position: relative;
+    bottom: 16%;
+    text-align: center;
+    width: 100%;
+    background-color: darkolivegreen;
+    color: white;
+    border-radius: 5px;
+}
+.bottom > h4 {
+    padding: 2%;
+}
+section {
+    padding: 1%;
+    display: flex;
+    flex-flow: row wrap;
+    width: 80%;
+    margin: auto;
+    height: 800px;
+    overflow: scroll;
+    justify-content: space-around;
+    border: 1px solid lightgray;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.pic-item {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.delete, .edit {
+    color: white;
+    background-color: darkcyan;
+    font-size: 19px;
+    border-radius: 5px;
+}
+.edit > a {
+    color: white;
+}
+.edit {
+    width: 50px;
+    text-align: center;
+}
+.container > h2 {
+    text-align: center;
+
+}
+.container {
+    width: 40%;
+    background-color: rgba(194, 194, 216, 0.3);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-size: 20px;
+}
+.stats {
+    width: 80%;
+    margin: auto;
+}
+.create {
+    float: right;
+}
+.show {
+    width: 75%;
+    margin: 6% auto;
+    background-color: rgba(194, 194, 216, 0.3);
+    height: 700px;
+    padding: 1%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.show > img {
+    float: left;
+    border-radius: 20px;
+    border: 2px solid whitesmoke;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
+#tabs {
+    float: right;
+    width: 60%;
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: 18px;
+}

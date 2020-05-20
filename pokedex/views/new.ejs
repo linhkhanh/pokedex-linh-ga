@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head.ejs') %>
+</head>
+
+<body>
+    <header>
+        <a href="/" class="pokedex">
+            <h1>POKEDEX</h1>
+        </a>
+        <nav>
+            <a href="/pokemon" class="nav">List</a>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>New Pokemon</h2>
+        <form action="/pokemon" method="POST">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" class="form-control" placeholder="Name of pokemon" required="true" />
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="type">Type</label>
+                    <input type="text" name="type" class="form-control" placeholder="Type of pokemon" required="true" />
+                </div>
+            </div>
+
+            <div class="form-group col-sm-12">
+                <label for="img">Image</label>
+                <input type="text" name="img" class="form-control" placeholder="Image of pokemon" required="true" />
+            </div>
+    
+            <div class="form-group col-sm-12">
+                <label for="stats">Stats</label>
+                <div class="stats">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label>Hp</label>
+                            <input type="number" name="stats[hp]" class="form-control" min='10' max='200' required="true" />
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Attack</label>
+                            <input type="number" name="stats[attack]" class="form-control" min='10' max='200' required="true"/>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label>Defense</label>
+                            <input type="number" name="stats[defense]" class="form-control" min='10' max='200' required="true" />
+                        </div>
+                        <div class="form-group col-md-6">
+                        <label>Spattack</label>
+                        <input type="number" name="stats[spattac]" class="form-control" min='10' max='200' required="true"/>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label>Spdefense</label>
+                        <input type="number" name="stats[spdefense]" class="form-control" min='10' max='200' required="true"/>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label>Speed</label>
+                        <input type="number" name="stats[speed]" class="form-control" min='10' max='200' required="true"/>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <input type="submit" class="btn btn-primary create" value="Create">
+    </form>
+    </div>
+</body>
+
+</html>

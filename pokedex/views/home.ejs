@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head.ejs') %>
+</head>
+
+<body>
+    <header>
+        <a href="/" class="pokedex">
+            <h1>POKEDEX</h1>
+        </a>
+        <nav>
+            <a href="/pokemon" class="nav">List</a>
+            <a href="/pokemon/new" class="nav">Create</a>
+        </nav>
+    </header>
+    <div class="logo">
+        <img src="https://pluspng.com/img-png/pokemon-logo-png-pokemon-logo-png-2000.png" class="pokemon">
+    </div>
+    <form class="form-search" action="/pokemon/search" method="GET">
+        <input type="submit" value="&#x1F50E" class="search">
+        <input type="text" name="name" placeholder="Search pokemon" class="input-search"> 
+    </form>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head.ejs') %>
+</head>
+
+<body>
+    <header>
+        <a href="/" class="pokedex">
+            <h1>POKEDEX</h1>
+        </a>
+        <nav>
+            <a href="/pokemon/new" class="nav">Create</a>
+        </nav>
+    </header>
+    <section>
+        <% data.forEach((item, index) => { %>
+        <div class="item">
+            <a href="/pokemon/<%= index; %>"><img src='<%= item.img; %>' class="pic-item"></a>
+            <div class="bottom">
+                <h4><%= data[index].name; %></h4>
+            </div>
+            <div class="top">
+                <form action="/pokemon/<%= index %>?_method=DELETE" method="POST">
+                    <button type="submit" class="delete">Delete</button>
+                </form>
+                <div class="edit"><a href="/pokemon/<%=index%>/edit">Edit</a></div>
+            </div>
+        </div>
+        <% }) %>
+    </section>
+</body>
+
+</html>
