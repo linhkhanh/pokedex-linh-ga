@@ -60,6 +60,7 @@ const pages = {
         const index = data.findIndex((item) => {
             return item.name.toLowerCase().includes(str);
         });
+        index === -1 ? res.send('Can not find that pokemon') :
         res.redirect(`/pokemon/${index}`);
     }
 }
