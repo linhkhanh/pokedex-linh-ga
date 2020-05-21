@@ -25,7 +25,7 @@ const pages = {
         req.body.damages = {};
         if (!Array.isArray(req.body.type)) req.body.type = convertStrToArr(req.body.type);
         data.push(req.body);
-        res.redirect('/pokemon');
+        res.redirect(`/pokemon/${data.length-1}`);
     },
     showPage: (req, res) => {
         res.render('show.ejs', {

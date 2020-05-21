@@ -38,23 +38,29 @@
                 <p><%= pokemon.misc.classification; %></p>
             </div>
             <div id="tabs-3">
-                <% pokemon.type.forEach((item) => { %>
-                <p><%= item; %></p>
-                <% }) %>
+                <ul>
+                    <% pokemon.type.forEach((item) => { %>
+                    <li><%= item; %></li>
+                    <% }) %>
+                </ul>
             </div>
             <div id="tabs-4">
-                <% for(let key in pokemon.stats) { %>
-                <p><%= key; %> : <%= pokemon.stats[key]; %></p>
-                <% } %>
+                <ul>
+                    <% for(let key in pokemon.stats) { %>
+                    <li><%= key; %> : <%= pokemon.stats[key]; %></li>
+                    <% } %>
+                </ul>
             </div>
             <div id="tabs-5">
                 <p>Weight: <%= pokemon.misc.weight; %></p>
                 <p>Height: <%= pokemon.misc.height; %></p>
             </div>
             <div id="tabs-6">
-                <% for(let key in pokemon.damages) { %>
-                <p><%= key; %> : <%= pokemon.damages[key]; %></p>
-                <% } %>
+                <ul>
+                    <% for(let key in pokemon.damages) { %>
+                    <li><%= key; %> : <%= pokemon.damages[key]; %></li>
+                    <% } %>
+                </ul>
             </div>
 
         </div>
