@@ -7,7 +7,7 @@ const convertStrToArr = (str) => {
 
 const pages = {
     homePage: (req, res) => {
-        res.render('home.ejs')
+        res.render('home.ejs', {data})
     },
     indexPage: (req, res) => {
         res.render('index.ejs', {
@@ -30,7 +30,8 @@ const pages = {
     showPage: (req, res) => {
         res.render('show.ejs', {
             pokemon: data[req.params.index],
-            index: req.params.index
+            index: req.params.index,
+            data
         })
     },
     deletePokemon: (req, res) => {

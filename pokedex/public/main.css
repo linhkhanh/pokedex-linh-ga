@@ -42,18 +42,15 @@ nav {
 }
 .form-search {
     width: 40%;
-    margin: 5% auto;
+    margin: auto;
     background-color: wheat;
     border-radius: 5px;
     font-size: 22px;
  }
-.search, .input-search {
+.search {
     border: none;
     background-color: wheat;
     border-radius: 5px;
-}
-.input-search {
-    width: 92%;
 }
 
 .item {
@@ -165,4 +162,16 @@ label {
 }
 ul > li {
     list-style-type: circle;
+}
+input[list]
+{
+  background: wheat;
+  width: 92%;
+  border-radius: 5px;
+}
+.form-show {
+    width: 20%;
+}
+.form-show > input[list] {
+    width: 80%;
 }

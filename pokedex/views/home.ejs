@@ -20,7 +20,12 @@
     </div>
     <form class="form-search" action="/pokemon/search" method="GET">
         <input type="submit" value="&#x1F50E" class="search">
-        <input type="text" name="name" placeholder="Search pokemon" class="input-search">
+        <input type="text" name="name" list="pokemonList" placeholder="Search Pokemon">
+        <datalist id="pokemonList">
+            <% data.forEach((item) => { %>
+                <option value="<%= item.name; %>"></option>
+            <% }) %>
+        </datalist>
     </form>
 
 </body>

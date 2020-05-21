@@ -14,6 +14,15 @@
         <a href="/" class="pokedex">
             <h1>POKEDEX</h1>
         </a>
+        <form class="form-search form-show" action="/pokemon/search" method="GET">
+            <input type="submit" value="&#x1F50E" class="search">
+            <input type="text" name="name" list="pokemonList" placeholder="Search Pokemon">
+            <datalist id="pokemonList">
+                <% data.forEach((item) => { %>
+                    <option value="<%= item.name; %>"></option>
+                <% }) %>
+            </datalist>
+        </form>
         <nav>
             <a href="/pokemon" class="nav">List</a>
             <a href="/pokemon/new" class="nav">Create</a>
