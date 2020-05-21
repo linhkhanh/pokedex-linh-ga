@@ -54,8 +54,8 @@ nav {
 }
 
 .item {
-    width: 22%;
-    height: 250px;
+    width: 15%;
+    height: 150px;
     margin: 1%;
     border: 2px solid whitesmoke;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -67,14 +67,14 @@ nav {
     justify-content: space-between;
     background-color: white;
     position: relative;
-    bottom: 122%;
+    bottom: 134%;
     width: 100%;
     background-color: rgba(235, 233, 243, 0.3);
     padding: 1%;
 }
 .bottom {
     position: relative;
-    bottom: 16%;
+    bottom: 24%;
     text-align: center;
     width: 100%;
     background-color: darkolivegreen;
